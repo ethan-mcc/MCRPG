@@ -1,0 +1,11 @@
+name: PlayerControl
+author: EthanMcCaskey
+version: 1.0
+main: me.ethan.playercontrol.PlayerControl
+description: Control where player spawns, setting up their class, and spawning into the world.
+api-version: 1.13
+
+commands:
+  giveitem:
+    usage: /<command>
+    description: First Command
