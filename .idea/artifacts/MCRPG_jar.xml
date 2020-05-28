@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MCRPG:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MCRPG_jar</output-path>
+    <root id="archive" name="MCRPG.jar">
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/TestServer/spigot.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
