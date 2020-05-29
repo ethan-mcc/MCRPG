@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class Commands implements CommandExecutor {
 
-    public String cmd1 = "giveitems";
+    public String cmd1 = "giveitem";
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {

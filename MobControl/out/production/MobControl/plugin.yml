@@ -1,0 +1,6 @@
+name: MobControl
+author: EthanMcCaskey
+version: 1.0
+main: me.ethan.mobcontrol.MobControl
+description: Control minecraft mobs to be better and drop better items
+api-version: 1.13

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="MCRPG:jar" />
+      <artifact name="MobControl:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04e6f07b-ac47-4310-9502-0bd6cd819f93" name="Default Changelist" comment="" />
+    <list default="true" id="547520f1-5b5b-4777-b2e9-1e6e78d419af" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,37 +17,60 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlayerControl/src/me/ethan/playercontrol/Commands.java">
+        <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="85">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/ethan/mobcontrol/MobControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PlayerControl/src/me/ethan/playercontrol/EventsClass.java">
+        <entry file="file://$PROJECT_DIR$/src/me/ethan/mobcontrol/EventsClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="42" />
+            <state relative-caret-position="315">
+              <caret line="163" column="35" lean-forward="true" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
+              <folding>
+                <element signature="e#722#2388#1" />
+                <element signature="e#2441#3524#1" />
+                <element signature="e#3575#4771#1" />
+                <element signature="e#4823#4917#1" />
+                <element signature="e#5486#5864#1" />
+                <element signature="e#5702#5969#1" />
+                <element signature="e#6125#6419#1" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PlayerControl/src/me/ethan/playercontrol/Commands.java" />
+        <option value="$PROJECT_DIR$/src/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/me/ethan/mobcontrol/MobControl.java" />
+        <option value="$PROJECT_DIR$/src/me/ethan/mobcontrol/EventsClass.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-4" />
     <option name="y" value="73" />
     <option name="width" value="1890" />
@@ -57,49 +81,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="MCRPG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCRPG" type="462c0819:PsiDirectoryNode" />
+              <item name="MobControl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MobControl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MCRPG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCRPG" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerControl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MCRPG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCRPG" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerControl" type="462c0819:PsiDirectoryNode" />
+              <item name="MobControl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MobControl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="MCRPG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCRPG" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerControl" type="462c0819:PsiDirectoryNode" />
+              <item name="MobControl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MobControl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="me" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MCRPG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCRPG" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerControl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="me" type="462c0819:PsiDirectoryNode" />
-              <item name="ethan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MCRPG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MCRPG" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerControl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="me" type="462c0819:PsiDirectoryNode" />
-              <item name="ethan" type="462c0819:PsiDirectoryNode" />
-              <item name="playercontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="mobcontrol" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -108,11 +108,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="mobcontrol" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590754412461" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TestServer/plugins" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -131,18 +137,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="04e6f07b-ac47-4310-9502-0bd6cd819f93" name="Default Changelist" comment="" />
-      <created>1590655104132</created>
+      <changelist id="547520f1-5b5b-4777-b2e9-1e6e78d419af" name="Default Changelist" comment="" />
+      <created>1590480060721</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1590655104132</updated>
+      <updated>1590480060721</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="73" width="1890" height="764" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25519127" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -156,32 +163,57 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" visible="true" weight="0.33755943" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Extract Method" order="8" weight="0.25337487" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917964" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3468328" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PlayerControl/src/me/ethan/playercontrol/Commands.java">
+    <entry file="file://$PROJECT_DIR$/src/me/ethan/mobcontrol/Commands.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        <state relative-caret-position="468">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlayerControl/src/me/ethan/playercontrol/EventsClass.java">
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/ethan/mobcontrol/MobControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/ethan/mobcontrol/EventsClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="163" column="35" lean-forward="true" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
+          <folding>
+            <element signature="e#722#2388#1" />
+            <element signature="e#2441#3524#1" />
+            <element signature="e#3575#4771#1" />
+            <element signature="e#4823#4917#1" />
+            <element signature="e#5486#5864#1" />
+            <element signature="e#5702#5969#1" />
+            <element signature="e#6125#6419#1" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -191,7 +223,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>MCRPG:jar</last-edited>
+          <last-edited>MobControl:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -239,7 +271,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>MCRPG</last-edited>
+          <last-edited>MobControl</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
