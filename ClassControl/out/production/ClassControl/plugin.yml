@@ -1,0 +1,6 @@
+name: ClassControl
+author: EthanMcCaskey
+version: 1.0
+main: me.ethan.classcontrol.ClassControl
+description: Select the class the player starts with when they join
+api-version: 1.13

@@ -5,6 +5,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.World;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.craftbukkit.Main;
 import org.bukkit.craftbukkit.v1_15_R1.metadata.EntityMetadataStore;
 import org.bukkit.entity.*;
@@ -18,10 +19,12 @@ import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.metadata.LazyMetadataValue;
 import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.persistence.PersistentDataType;
 
 import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.function.DoubleToIntFunction;
 
@@ -29,50 +32,28 @@ public class EventsClass implements Listener
 {
     public double level;
 
-    /*public static void spawnZombie(MobControl plugin, Player p) {
-        Zombie z = (Zombie) p.getWorld().spawnEntity(p.getLocation(), EntityType.ZOMBIE);
-        z.setMetadata(p.getName(), new FixedMetadataValue(plugin, "yes!"));
-    }
+    private MobControl instance;
 
-    public static Player getPlayerWithZombie(Zombie z) {
-        for (Player p : Bukkit.getOnlinePlayers()) {
-            if (z.hasMetadata(p.getName())) {
-                return p;
-                p.sendMessage(z.getMetadata(p.getName()));
-            }
-        }
-        return null;
-    }/*/
+    public EventsClass(final MobControl instance) {
+        this.instance = instance;
+    }
 
     //Set METADATA, that MobControl plugin part is really important
     @EventHandler
-    public void onEntitySpawn(MobControl plugin, EntitySpawnEvent e) {
+    public void onEntitySpawn(final CreatureSpawnEvent e) {
         level = Math.random() * 5;
-        int Level = (int)level;
-        //ZOMBIE
-        if (e.getEntity() instanceof Zombie) {
-            Zombie z = (Zombie) e.getEntity();
-            z.addScoreboardTag("" + Level);
-            z.setMetadata("zombie", new FixedMetadataValue(plugin, "1"));
-        }
-        //SKELETON
-        if (e.getEntity() instanceof Skeleton) {
-            Skeleton s = (Skeleton) e.getEntity();
-            s.setMetadata("skeleton", new FixedMetadataValue(plugin, "1"));
-        }
-        //SPIDER
-        if (e.getEntity() instanceof Spider) {
-            Spider sp = (Spider) e.getEntity();
-            sp.setMetadata("spider", new FixedMetadataValue(plugin, "1"));
-        }
+        final int Level = (int)level;
+        LivingEntity livingEntity = e.getEntity();
+        String isLevelled = livingEntity.getPersistentDataContainer().get(instance.isLevelledKey, PersistentDataType.STRING);
+        final double baseMaxHealth = Objects.requireNonNull(e.getEntity().getAttribute(Attribute.GENERIC_MAX_HEALTH)).getBaseValue();
+        final double newMaxHealth = baseMaxHealth + (baseMaxHealth * (0.2D) * level);
+        Objects.requireNonNull(livingEntity.getAttribute(Attribute.GENERIC_MAX_HEALTH)).setBaseValue(newMaxHealth);
+        livingEntity.setHealth(newMaxHealth); //set there max health
+
+        livingEntity.getPersistentDataContainer().set(instance.levelKey, PersistentDataType.INTEGER, Level);
+        livingEntity.getPersistentDataContainer().set(instance.isLevelledKey, PersistentDataType.STRING, "true");
+
     }
-    //METADATA TABLE
-    //0: LEVEL
-    //1:
-    //2:
-    //3:
-    //4:
-    //5:
 
     @EventHandler
     public void onEntityDeath (EntityDeathEvent e) {
@@ -85,21 +66,7 @@ public class EventsClass implements Listener
         if (e.getEntity() instanceof Zombie) {
             //type cast zombie
             Zombie z = (Zombie) e.getEntity();
-            //METADATA get "zombie"
-            int Level = 0;
-            if(z.hasMetadata("zombie")) { //if statement that prevents the error from showing
-
-                List<MetadataValue> values = z.getMetadata("zombie");
-                //Make int and get the first value
-                Level = values.get(0).asInt();
-                //it is out of bounds here ^^^
-
-                System.out.println(values.get(0).asInt() + "aaaa");
-            }
-            else {
-                System.out.println("t");
-                return;
-            }
+            int Level = z.getPersistentDataContainer().get(instance.levelKey, PersistentDataType.INTEGER);
             //clear zombie drops
             e.getDrops().clear();
             //get world
@@ -134,16 +101,7 @@ public class EventsClass implements Listener
         //SKELETON
         else if (e.getEntity() instanceof Skeleton) {
             Skeleton s = (Skeleton) e.getEntity();
-            //METADATA get "zombie"
             int Level = 0;
-            if(s.hasMetadata("skeleton")) {
-                List<MetadataValue> values = s.getMetadata("skeleton");
-                //Make int and get the first value
-                Level = values.get(0).asInt();
-            }
-            else {
-                return;
-            }
             e.getDrops().clear();
             World w = s.getWorld();
             if(drop <= 11 && Level > 3) {
@@ -165,16 +123,7 @@ public class EventsClass implements Listener
         //SPIDER
         else if (e.getEntity() instanceof Spider) {
             Spider sp = (Spider) e.getEntity();
-            //METADATA get "zombie"
             int Level = 0;
-            if(sp.hasMetadata("spider")) {
-                List<MetadataValue> values = sp.getMetadata("spider");
-                //Make int and get the first value
-                Level = values.get(0).asInt();
-            }
-            else {
-                return;
-            }
             e.getDrops().clear();
             World w = sp.getWorld();
             if (drop <= 10 ) {
@@ -213,15 +162,8 @@ public class EventsClass implements Listener
             if (e.getEntity() instanceof Zombie) {
                 Zombie en = (Zombie) e.getEntity();
                 //METADATA get "zombie"
-                int Level = 0;
-                if(en.hasMetadata("zombie")) {
-                    List<MetadataValue> values = en.getMetadata("zombie");
-                    //Make int and get the first value
-                    Level = values.get(0).asInt();
-                }
-                else {
-                    return;
-                }
+                int Level = en.getPersistentDataContainer().get(instance.levelKey, PersistentDataType.INTEGER);
+                System.out.println(ChatColor.RED + " " + Level);
                 String name = ChatColor.BOLD + "" + ChatColor.RED + "Necrosis";
                 double maxHealth = en.getMaxHealth();
                 double currentHealth = en.getHealth() - e.getDamage();
@@ -232,14 +174,6 @@ public class EventsClass implements Listener
                 Skeleton en = (Skeleton) e.getEntity();
                 //METADATA get "skeleton"
                 int Level = 0;
-                if(en.hasMetadata("skeleton")) {
-                    List<MetadataValue> values = en.getMetadata("skeleton");
-                    //Make int and get the first value
-                    Level = values.get(0).asInt();
-                }
-                else {
-                    return;
-                }
                 String name = ChatColor.BOLD + "" + ChatColor.RED + "Skeleton";
                 double maxHealth = en.getMaxHealth();
                 double currentHealth = en.getHealth() - e.getDamage();
@@ -250,14 +184,6 @@ public class EventsClass implements Listener
                 Spider en = (Spider) e.getEntity();
                 //METADATA get "spider"
                 int Level = 0;
-                if(en.hasMetadata("spider")) {
-                    List<MetadataValue> values = en.getMetadata("spider");
-                    //Make int and get the first value
-                    Level = values.get(0).asInt();
-                }
-                else {
-                    return;
-                }
                 String name = ChatColor.BOLD + "" + ChatColor.RED + "Araneae";
                 double maxHealth = en.getMaxHealth();
                 double currentHealth = en.getHealth() - e.getDamage();

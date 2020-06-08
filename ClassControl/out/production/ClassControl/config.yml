@@ -1,0 +1,9 @@
+SpawnItems:
+  stats:
+    ==: org.bukkit.inventory.ItemStack
+    type: CHEST
+    amount: 1
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: &cClass Stats &8(Right Click)

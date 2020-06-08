@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ClassControl:jar">
+    <output-path>$USER_HOME$/Desktop/TestServer/plugins</output-path>
+    <root id="archive" name="ClassControl.jar">
+      <element id="module-output" name="ClassControl" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/TestServer/spigot.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
