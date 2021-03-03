@@ -1,6 +1,8 @@
 # MCRPG
 Minecraft Spigot RPG server, custom items, custom mobs, custom mob drops, custom entities, custom resource pack.
 
+Unfinished
+
 Built using Minecraft Spigot 1.15.2
 
 Custom items, custom abilities, and custom 3d models.
